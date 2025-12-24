@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Screen Background Remover</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Green Screen Editor</h1>
+  </header>
+
+  <main>
+    <section class="controls">
+      <fieldset>
+        <legend>Image Inputs</legend>
+        <label for="foregroundInput">Foreground (Green Screen)
+          <input type="file" id="foregroundInput" accept="image/*" aria-label="Upload foreground image">
+        </label>
+
+        <label for="backgroundInput">Background
+          <input type="file" id="backgroundInput" accept="image/*" aria-label="Upload background image">
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Position and Transform</legend>
+        <label for="posX">X Position
+          <input type="range" id="posX" min="0" max="100" value="50" aria-label="Adjust X position">
+        </label>
+
+        <label for="posY">Y Position
+          <input type="range" id="posY" min="0" max="100" value="50" aria-label="Adjust Y position">
+        </label>
+
+        <label for="scale">Scale
+          <input type="range" id="scale" min="10" max="200" value="100" aria-label="Adjust scale">
+        </label>
+
+        <label for="rotate">Rotation
+          <input type="range" id="rotate" min="-180" max="180" value="0" aria-label="Adjust rotation">
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Manual Refine</legend>
+        <label for="brushMode">Mode
+          <select id="brushMode" aria-label="Select brush mode">
+            <option value="restore">Restore</option>
+            <option value="erase">Erase</option>
+          </select>
+        </label>
+
+        <label for="brushSize">Brush Size
+          <input type="range" id="brushSize" min="5" max="80" value="30" aria-label="Adjust brush size">
+        </label>
+
+        <button id="toggleBrush" class="btn" aria-label="Toggle brush mode">Enable Brush</button>
+        <button id="downloadBtn" class="btn" aria-label="Download the edited image">Download Image</button>
+      </fieldset>
+    </section>
+
+    <section class="canvas-container">
+      <canvas id="canvas" aria-label="Editing canvas"></canvas>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Green Screen Editor</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

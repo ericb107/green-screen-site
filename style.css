@@ -1,0 +1,123 @@
+/* ---------- Base Styles ---------- */
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+/* ---------- Layout ---------- */
+.controls {
+  display: grid;
+  gap: 15px;
+  max-width: 420px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #222;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 14px;
+}
+
+fieldset {
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 15px;
+}
+
+legend {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 0 5px;
+}
+
+/* ---------- Buttons ---------- */
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: #444;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background: #555;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:focus {
+  outline: 2px solid #888;
+}
+
+/* ---------- Inputs ---------- */
+input[type="range"] {
+  width: 100%;
+  margin-top: 5px;
+}
+
+select {
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background: #222;
+  color: #fff;
+}
+
+select:focus {
+  outline: 2px solid #888;
+}
+
+/* ---------- Canvas ---------- */
+canvas {
+  margin-top: 20px;
+  border: 2px solid #444;
+  max-width: 100%;
+  background: #000;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #888;
+}
+
+/* ---------- Responsive Design ---------- */
+@media (max-width: 480px) {
+  .controls {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
